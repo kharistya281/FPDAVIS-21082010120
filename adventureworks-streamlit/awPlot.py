@@ -11,7 +11,7 @@ import altair as alt
 # connect to database
 
 
-conn = st.sonnection("mydb", type="sql", autocommit=True)
+conn = st.connection("mydb", type="sql", autocommit=True)
 
 # HEAD
 # Title
@@ -104,7 +104,7 @@ from dimreseller d
 join dimgeography d2 on d.GeographyKey = d2.GeographyKey
 group by d2.CountryRegionCode, d.AnnualSales, d.AnnualRevenue """
 
-data1 = pd.read_sql(query1, connection)
+data1 = pd.read_sql(query1, conn)
 
 st.markdown("#### Scatter plot of Annual Sales and Annual Revenue")
 st.write("*RELATIONSHIP CHART - SCATTER PLOT*")
@@ -145,7 +145,7 @@ join factinternetsales f on f.OrderDateKey = d.TimeKey
 group by d.CalendarYear, d.MonthNumberOfYear 
 order by d.CalendarYear, d.MonthNumberOfYear"""
 
-data2 = pd.read_sql(query2, connection)
+data2 = pd.read_sql(query2, conn)
 
 # fig2, ax2 = plt.subplots()
 # for year, group in data2.groupby('CalendarYear'):
@@ -176,7 +176,7 @@ join dimproduct d2 on f.ProductKey = d2.ProductKey
 join dimproductsubcategory d3 on d2.ProductSubcategoryKey = d3.ProductSubcategoryKey
 group by d3.EnglishProductSubcategoryName, d.SalesTerritoryCountry """
 
-data4 = pd.read_sql(query4, connection)
+data4 = pd.read_sql(query4, conn)
 
 chart_bar = pd.DataFrame(
     {
@@ -200,7 +200,7 @@ join factinternetsales f on f.OrderDateKey = d.TimeKey
 group by d.CalendarQuarter, d.CalendarYear
 order by d.CalendarYear, d.CalendarQuarter"""
 
-data3 = pd.read_sql(query3, connection)
+data3 = pd.read_sql(query3, conn)
 
 data3['QuarterYear'] = data3['CalendarQuarter'].astype(str) + ' Q' + data3['CalendarYear'].astype(str)
 
