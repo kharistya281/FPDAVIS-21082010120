@@ -52,7 +52,9 @@ with st.sidebar:
 #     year_list = list(data_year.CalendarYear.unique())[::-1]
 #     selected_year = st.selectbox('Select a year', year_list)
     st.markdown('#### IMDB Dashboard')
-    st.write("[Click here to the link](http://localhost:8501/)")
+    st.write("[Click here to the link](https://sifodavis-21082010120-imdb.streamlit.app/)")
+    st.markdown("#### GitHub Link")
+    st.write("[Click here to the link](https://github.com/kharistya281/FPDAVIS-21082010120.git)")
 
     st.write("Nama : Kharisma Agustya Zahra Salsabilla")
     st.write("NPM  : 21082010120")
