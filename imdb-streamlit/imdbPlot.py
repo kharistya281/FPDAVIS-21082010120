@@ -18,7 +18,7 @@ st.title("Data Visualization of IMDB Data")
 # Read CSV files into dataframe
 try:
     # global df
-    df = pd.read_excel('imdb_data_combined.xlsx')
+    df = pd.read_csv('imdb_data_combined.csv', delimiter=';')
 
 except pd.errors.ParserError as e:
     st.error(f"Error reading the file: {e}")
