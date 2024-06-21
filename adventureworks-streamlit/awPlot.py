@@ -10,26 +10,8 @@ import altair as alt
 
 # connect to database
 
-# connection = mysql.connector.connect(
-#     host="kubela.id", 
-#     port=3306, 
-#     user="davis2024irwan", 
-#     password="wh451n9m@ch1n3", 
-#     database="aw"
-#     # host="localhost",
-#     # port=3306,
-#     # user="root",
-#     # password="",
-#     # database="dumb_dw_ad"
-#     )
-host="kubela.id"
-port=3306
-user="davis2024irwan"
-password="wh451n9m%40ch1n3" #encode '@' as '%40'
-database="aw"
 
-conn = f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
-connection = create_engine(conn)
+conn = st.sonnection("mydb", type="sql", autocommit=True)
 
 # HEAD
 # Title
