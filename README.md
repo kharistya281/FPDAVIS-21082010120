@@ -3,7 +3,7 @@
 
 Final Project Mata Kuliah Data Visualisasi Par A
 
-Nama : Kharisma Agustya Zahra Salsabilla 
+Nama : Kharisma Agustya Zahra Salsabilla  
 NPM  : 21082010120
 
 
