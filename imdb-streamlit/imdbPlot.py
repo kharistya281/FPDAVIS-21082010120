@@ -33,7 +33,9 @@ with st.sidebar:
     selected_ratio = st.selectbox('Select a aspect ratio', df['Aspect_Ratio'].unique())
 
     st.markdown("#### Adventureworks Dashboard")
-    st.write("[Click here to the link](http://localhost:8501/)")
+    st.write("[Click here to the link](https://sifodavis-21082010120-adventureworks.streamlit.app/)")
+    st.markdown("#### GitHub Link")
+    st.write("[Click here to the link](https://github.com/kharistya281/FPDAVIS-21082010120.git)")
 
 
     st.write("Nama : Kharisma Agustya Zahra Salsabilla")
