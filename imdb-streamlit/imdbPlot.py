@@ -16,13 +16,23 @@ st.set_page_config(
 st.title("Data Visualization of IMDB Data")
 
 # Read CSV files into dataframe
-try:
-    # global df
-    df = pd.read_csv('/FPDAVIS-21082010120/blob/main/imdb-streamlit/imdb_data_combined.csv', delimiter=';')
+# try:
+#     # global df
+#     df = pd.read_csv('/FPDAVIS-21082010120/blob/main/imdb-streamlit/imdb_data_combined.csv', delimiter=';')
     
 
+# except pd.errors.ParserError as e:
+#     st.error(f"Error reading the file: {e}")
+
+try:
+    df = pd.read_csv('imdb-streamlit/imdb_data_combined.csv', delimiter=';')
+    print("File read successfully")
+except FileNotFoundError as e:
+    print(f"File not found: {e}")
 except pd.errors.ParserError as e:
-    st.error(f"Error reading the file: {e}")
+    print(f"Parser error: {e}")
+except Exception as e:
+    print(f"An error occurred: {e}")
 
 
 df['Rate'] = df['Rate'].astype(float)
