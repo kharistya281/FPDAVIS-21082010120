@@ -18,8 +18,8 @@ conn = st.connection("mydb", type="sql", autocommit=True)
 st.set_page_config(
     page_title="Adventureworks Dashboard",
     page_icon="🚲",
-    layout="wide")
-    # initial_sidebar_state="expanded"
+    layout="wide",
+    initial_sidebar_state="expanded")
 
 st.title("Visualisasi Data dari Database Adventure Works")
 
