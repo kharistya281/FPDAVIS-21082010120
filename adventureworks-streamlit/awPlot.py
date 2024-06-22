@@ -18,7 +18,7 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 
 # connect to database
-conn = st.connection("mydb", type="sql", autocommit=True)
+conn = st.experimental_connection("mydb", type="sql", autocommit=True)
 
 st.title("Visualisasi Data dari Database Adventure Works")
 
