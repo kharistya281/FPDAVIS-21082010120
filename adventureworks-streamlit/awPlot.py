@@ -18,8 +18,15 @@ st.set_page_config(
     initial_sidebar_state="expanded")
 
 # connect to database
-conn = st.connection("mydb", type="sql", autocommit=True)
+# conn = st.connection("mydb", type="sql", autocommit=True)
+host="kubela.id"
+port=3306
+user="davis2024irwan"
+password="wh451n9m%40ch1n3" #encode '@' as '%40'
+database="aw"
 
+connection = f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
+conn = create_engine(connection)
 st.title("Visualisasi Data dari Database Adventure Works")
 
 
