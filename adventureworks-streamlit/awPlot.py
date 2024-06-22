@@ -8,10 +8,6 @@ from sqlalchemy import create_engine
 import altair as alt
 
 
-# connect to database
-
-
-conn = st.connection("mydb", type="sql", autocommit=True)
 
 # HEAD
 # Title
@@ -20,6 +16,9 @@ st.set_page_config(
     page_icon="🚲",
     layout="wide",
     initial_sidebar_state="expanded")
+
+# connect to database
+conn = st.connection("mydb", type="sql", autocommit=True)
 
 st.title("Visualisasi Data dari Database Adventure Works")
 
